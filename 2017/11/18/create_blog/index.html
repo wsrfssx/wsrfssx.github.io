@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wsrfssx.github.io">
-  <title>Archives | Luping&#39;s Blog</title>
+  <title>利用Hexo和Github搭建个人博客 | Luping&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="路平 | python | bigdata | 数据分析">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Luping&#39;s Blog">
-<meta property="og:url" content="https://wsrfssx.github.io/archives/index.html">
+  <meta name="description" content="Hexo | Github | 搭建个人博客 | 博客">
+<meta name="keywords" content="Hexo,Github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用Hexo和Github搭建个人博客">
+<meta property="og:url" content="https://wsrfssx.github.io/2017/11/18/create_blog/index.html">
 <meta property="og:site_name" content="Luping&#39;s Blog">
-<meta property="og:description" content="路平 | python | bigdata | 数据分析">
+<meta property="og:description" content="Hexo | Github | 搭建个人博客 | 博客">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-18T14:39:07.760Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Luping&#39;s Blog">
-<meta name="twitter:description" content="路平 | python | bigdata | 数据分析">
+<meta name="twitter:title" content="利用Hexo和Github搭建个人博客">
+<meta name="twitter:description" content="Hexo | Github | 搭建个人博客 | 博客">
   
   
     <link rel="icon" href="/favicon.png">
@@ -165,36 +167,91 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-create_blog" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/18/create_blog/" class="archive-article-date">
-  	<time datetime="2017-11-18T14:44:56.067Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/18/create_blog/">利用Hexo和Github搭建个人博客</a>
+    <h1 class="article-title" itemprop="name">
+      利用Hexo和Github搭建个人博客
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/18/create_blog/" class="archive-article-date">
+  	<time datetime="2017-11-18T14:44:56.067Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  一直以来就有想法搭建一个个人博客，记录自己学习路上的点滴，也方便和大家交流。直到最近在网上看到用Hexo和Github搭建个人博<br>客的相关教程，花了几个晚上，终于把博客弄好了。其中走了不少弯路，也参考了许多大神的教程。现在分享出来供大家参考！<br>  以下均为Windows系统下的安装教程。<br><a id="more"></a></p>
+<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>去<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">官网</a>下载，安装</p>
+<h3 id="安装Git，配置Github"><a href="#安装Git，配置Github" class="headerlink" title="安装Git，配置Github"></a>安装Git，配置Github</h3><p>这里主要参考廖雪峰的<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">Git教程</a>。<br>首先，下载<a href="https://git-for-windows.github.io/" target="_blank" rel="noopener">Git客户端</a><br>其次，注册Github<br>最后，配置Github，配置SSH-key，创建仓库，名称只能为username.github.io，其中username只能是注册的用户名</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><ul>
+<li><p>安装Hexo，在Git命令窗口中输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化Hexo，新建一个文件夹，用来存放博客文件，在Git中进入该文件夹路径，输入:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成文件，启动本地服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在浏览器输入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> ，就可以看到默认的页面。</p>
+<h2 id="自定义配置"><a href="#自定义配置" class="headerlink" title="自定义配置"></a>自定义配置</h2><h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>打开根目录下_config.yml文件，找到deploy，修改成如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/username/username.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></p>
+<p>username替换为相应的用户名。<br>执行命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git –-save</span><br></pre></td></tr></table></figure></p>
+<p>然后，执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<p>在浏览器中输入<a href="https://username.github.io" target="_blank" rel="noopener">https://username.github.io</a> ，即可访问（username对应你的用户名）<br>至此，博客已经搭建完毕。</p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>主题存放在themes文件夹内，我使用的是<a href="http://litten.me/" target="_blank" rel="noopener">Litten</a>的<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">yilia</a>主题，把主题下载下来放到themes文件夹内，然后把根目录下的_config.yml文件中的theme：改成对应主题文件夹的名字，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: hexo-theme-yilia-master</span><br></pre></td></tr></table></figure></p>
+<h2 id="使用博客"><a href="#使用博客" class="headerlink" title="使用博客"></a>使用博客</h2><h3 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h3><p>在Git中输入如下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></p>
+<p>会在source\_posts中生成my new post.md，使用markdown编辑器打开，开始写你的第一篇博客。<br>完成后保存，执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<p>在浏览器中输入<a href="https://username.github.io，查看你的博客。" target="_blank" rel="noopener">https://username.github.io，查看你的博客。</a></p>
+<h3 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h3><p>执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"pagename"</span></span><br></pre></td></tr></table></figure></p>
+<p>会在source文件夹下生成一个pagename的文件夹，里面生成index.md文件，然后编辑即可。</p>
+<h2 id="更多自定义配置"><a href="#更多自定义配置" class="headerlink" title="更多自定义配置"></a>更多自定义配置</h2><p>更多自定义的配置，大家可以慢慢摸索，比如增加评论功能，统计博客访问人数等等。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -210,7 +267,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -223,44 +280,104 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://wsrfssx.github.io/2017/11/18/create_blog/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/18/hello-world/" class="archive-article-date">
-  	<time datetime="2017-11-18T14:19:18.338Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/18/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -283,8 +400,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
